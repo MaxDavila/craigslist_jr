@@ -1,0 +1,7 @@
+<h2> Edit Post </h2>
+<form action="/category/post/<%=@post.id%>" method='post'>
+  <input type="hidden" name="_method" value="put">
+  <textarea name="title"><%=@post.title%></textarea><br>
+  <textarea name="content"><%=@post.content%></textarea><br>
+  <input type="submit" value="Submit">
+</form>

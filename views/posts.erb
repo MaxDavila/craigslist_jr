@@ -1,0 +1,16 @@
+<h2> Posts </h2>
+<ul>
+<% @posts.each do |post| %>
+  <li><a href="/post/<%= post.id %>/"><%= post.title %></a></li>
+<% end %>
+</ul>
+<% if flash[:success] %>  
+    <p><%= flash[:success] %>/</p> 
+<% end %>  
+<h2>Create new</h2>
+<form action='/category/<%=@c.name%>/' method='post'>
+  <input type="text" name="title" placeholder="Title"></input><br>
+    <textarea name="content" placeholder="Content"></textarea><br>
+    <input type="text" name="email" placeholder="Email"></input><br>
+    <input type="submit" value="Submit">
+</form>

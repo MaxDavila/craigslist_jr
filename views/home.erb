@@ -1,0 +1,6 @@
+<h1>Craigslist</h2>
+  <ul>
+<% @categories.each do |category| %>
+  <li><a href="/category/<%= category.name %>/"><%= category.name %></a></li>
+<% end %>
+</ul>
